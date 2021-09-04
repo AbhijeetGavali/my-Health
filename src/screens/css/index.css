@@ -45,9 +45,9 @@ main {
 }
 .circle1,
 .circle2 {
-    background: white;
-    background: linear-gradient(
-        to right bottom,
+  background: white;
+  background: linear-gradient(
+    to right bottom,
     rgba(255, 255, 255, 0.8),
     rgba(255, 255, 255, 0.3)
   );
@@ -56,21 +56,22 @@ main {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
+  z-index: 0;
 }
 .active {
-    background: transparent !important;
-    border: none;
-    outline: none;
+  background: transparent !important;
+  border: none;
+  outline: none;
 }
 .active .fas {
-    color: rgb(102, 94, 83);
+  color: rgb(102, 94, 83);
 }
 .navbar {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0 !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 !important;
 }
 .fas {
   color: black;
@@ -104,13 +105,16 @@ main {
   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
   border-radius: 2rem;
   color: white;
-  padding: 0.5rem;
+  padding: 1.5rem;
   position: relative;
+  z-index: 2;
+  background-blend-mode: darken;
+  width: max-content;
 }
 
 .imp-text h2 {
   width: 100%;
-  color: white;
+  color: #730dfc;
   font-weight: 600;
 }
 
@@ -121,11 +125,13 @@ main {
     rgba(255, 255, 255, 0.3)
   );
   border: none;
-  width: 50%;
+  width: 100%;
   padding: 0.5rem;
   border-radius: 2rem;
+  z-index: 3;
+  outline: none;
 }
-
+.card-form,
 .card {
   display: flex;
   background: linear-gradient(
@@ -133,31 +139,39 @@ main {
     rgba(255, 255, 255, 0.8),
     rgba(255, 255, 255, 0.5)
   );
-  border-radius: 1rem;
-  margin: 2rem 0rem;
+  border-radius: 2rem;
+  flex-direction: column;
   padding: 2rem;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  height: 100%;
   justify-content: space-between;
+  width: 100%;
 }
 
-.progress {
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-  width: 100%;
-  height: 25%;
-  border-radius: 1rem;
-  position: relative;
-  overflow: hidden;
+.post-box {
+  height: 80vh !important;
+  overflow: auto;
 }
-.progress::after {
-  content: "";
+.BackgroundLandingPAge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(236, 236, 236);
-  position: absolute;
-  left: 60%;
+  border-radius: 2rem;
+  z-index: 0;
 }
-.card-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+.landingNavBar {
+  z-index: 2;
+}
+.card-form {
+  width: 100%;
+  margin: auto;
+  align-self: center;
+  z-index: 3;
+  height: 100%;
+  justify-content: space-evenly;
+  background-color: rgba(0, 255, 234, 0.603);
 }

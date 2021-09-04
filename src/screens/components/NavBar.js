@@ -13,7 +13,7 @@ export default function NavBar() {
         </div>
         <div>
           <Nav.Link eventKey="/DashBoard" className="link">
-            <Link to="/DashBoard" className="nav-link ">
+            <Link to="/" className="nav-link ">
               <i className="fas fa-home" />
             </Link>
           </Nav.Link>

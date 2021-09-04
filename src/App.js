@@ -14,8 +14,8 @@ export default function App() {
         <Router>
           {loading ? <LoadingScreen /> : null}
           <main>
-            <div class="circle1" />
-            <div class="circle2" />
+            <div className="circle1" />
+            <div className="circle2" />
             <Container className="glass">
               <Col md="1" className="py-4">
                 <NavBar />

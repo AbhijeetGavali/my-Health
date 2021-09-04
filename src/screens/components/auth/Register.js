@@ -1,5 +1,6 @@
+import axios from "axios";
 import React, { useState } from "react";
-import { Alert, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import WelcomeScreen from "./WelcomeScreen";
 
@@ -12,9 +13,32 @@ export default function Register() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [category, setCategory] = useState("");
 
-  const onSignUp = (e) => {
+  const onSignUp = async (e) => {
     e.preventDefault();
-    var div = document.getElementById("ResistrationForm");
+    if (password === confirmPassword) {
+      const data = {
+        firstName: firstName,
+        lastName: lastName,
+        phoneNo: phoneNo,
+        email: email,
+        password: password,
+        category: category,
+      };
+
+      axios
+        .post("/.netlify/functions/addUser", data)
+        .then((response) => {
+          console.log(response);
+          var div = document.getElementById("alert");
+          div.innerHTML = "User Resisterd Sucessfuly.";
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    } else {
+      var div = document.getElementById("alert");
+      div.innerHTML = "Passwords Not match.";
+    }
   };
 
   return (
@@ -29,7 +53,9 @@ export default function Register() {
               <h3>
                 <i className="far fa-address-card" /> Join
               </h3>
-              <p>Be a part for mentaning and mentoring the health.</p>
+              <p id="alert">
+                Be a part for mentaning and mentoring the health.
+              </p>
             </div>
             <Row>
               <Col>

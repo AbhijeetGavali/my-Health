@@ -29,9 +29,9 @@ export default function WelcomeScreen() {
 
   return (
     <Carousel className="d-flex flex-row h-100 align-items-center">
-      {slides.map((slides) => {
+      {slides.map((slides, idx) => {
         return (
-          <Carousel.Item>
+          <Carousel.Item key={idx}>
             <div className="dashboard">
               <img
                 className="d-block card w-100 h-100"

@@ -8,7 +8,7 @@ export default function NavBar() {
       <Nav fill variant="tabs" defaultActiveKey="/DashBoard" className="navbar">
         <div>
             <div onClick={null} className="link">
-              <i class="fas fa-user-tie"></i>
+              <i className="fas fa-user-tie"></i>
             </div>
         </div>
         <div>

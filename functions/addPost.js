@@ -1,10 +1,10 @@
 const { getCollection } = require("./utils/astraClient");
 
 exports.handler = async function (event) {
-  var data = event.body;
+  var dataset = event.body;
   const usersCollection = await getCollection().collection("post");
   try {
-    const post = await usersCollection.create(data.autherEmail, data);
+    const post = await usersCollection.create(data.autherEmail, dataset);
 
     return {
       statusCode: 200,

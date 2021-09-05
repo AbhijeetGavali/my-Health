@@ -25,8 +25,7 @@ interval medical chekup report should send to parents, family doctors and hostel
 ### Learn More `Functionalities`
 
 1. Medical History storage of each user student.
-2. on regular time interval medical checkup report will send to parents, family
-   doctors and hostel head.
+2.  At regular time intervals, medical checkup reports{suggest by doctors on checkup-event} will send to parents, family doctors, and hostel heads. {if conducted the test -test report if not warring eport}
 3. real time notification will send to parents, family doctors and hostel head regarding progress of medical helth/ condition
 4. according to age medical report notification will be sent.
 5. health monitoring system of each students based on their medical history and send

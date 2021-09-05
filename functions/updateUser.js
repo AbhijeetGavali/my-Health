@@ -4,7 +4,8 @@ exports.handler = async function (event) {
   var data = event.body;
   const usersCollection = await getCollection().collection(data.category);
   try {
-    const user = await usersCollection.get(data.email);
+    // partially update user
+    const user = await usersCollection.update(data.email, data);
     return {
       statusCode: 200,
       body: JSON.stringify(user),

@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import { LandingPage } from "./LandingPage";
 import { ProtectedRoute } from "./protected.route";
-import Dashboard from "./Dashboard";
+import Dashboard from "./main/Dashboard";
 import Post from "./main/Post";
 import Event from "./main/Event";
 import Setting from "./main/Setting";

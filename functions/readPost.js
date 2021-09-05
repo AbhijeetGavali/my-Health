@@ -1,13 +1,12 @@
 const { getCollection } = require("./utils/astraClient");
 
-exports.handler = async function (event) {
-  var data = event.body;
-  const usersCollection = await getCollection().collection(data.category);
+exports.handler = async function () {
+  const usersCollection = await getCollection().collection('post');
   try {
-    const user = await usersCollection.get(data.email);
+    const post = await usersCollection.get();
     return {
       statusCode: 200,
-      body: JSON.stringify(user),
+      body: JSON.stringify(post),
       headers: {
         "Content-type": "application/json",
       },

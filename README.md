@@ -4,7 +4,7 @@
 
 This is the Helth Monitoring app created from storing and monitoring medical data with large use case in covid like situation.
 
-[`Look to site deployed on Netlify: `]: https://myhealth-app.netlify.app/
+`Look to site deployed on Netlify: `: https://myhealth-app.netlify.app/
 
 ### `Targeted Users of the app`
 

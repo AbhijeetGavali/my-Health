@@ -174,7 +174,7 @@ export default function Post() {
       {post.map((element) => {
         return (
           <>
-            <div className="card ht-max mb-5">
+            <div className="card-post mb-5">
               <h3 className="pro-primary-heading text-center">
                 {element.title}
               </h3>

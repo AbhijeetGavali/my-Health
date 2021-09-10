@@ -32,7 +32,7 @@ main {
 }
 .glass {
   background: white;
-  min-height: 80vh;
+  height: 80vh;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),
@@ -132,13 +132,14 @@ main {
   outline: none;
 }
 .card-form,
+.card-post,
 .card {
   display: flex;
   background: linear-gradient(
     to left top,
     rgba(255, 255, 255, 0.8),
     rgba(255, 255, 255, 0.5)
-  );
+    );
   border-radius: 2rem;
   flex-direction: column;
   padding: 2rem;
@@ -149,8 +150,11 @@ main {
 }
 
 .post-box {
-  height: 80vh !important;
   overflow: auto;
+  height: max-content;
+}
+.card-post{
+  height: unset;
 }
 .BackgroundLandingPAge {
   position: absolute;
